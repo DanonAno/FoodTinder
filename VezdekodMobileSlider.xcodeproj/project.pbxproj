@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8812801855200681C2A /* AppDelegate.swift */; };
 		A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8832801855200681C2A /* SceneDelegate.swift */; };
-		A5B2D8862801855200681C2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8852801855200681C2A /* ViewController.swift */; };
+		A5B2D8862801855200681C2A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8852801855200681C2A /* MainViewController.swift */; };
 		A5B2D8892801855200681C2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B2D8872801855200681C2A /* Main.storyboard */; };
 		A5B2D88B2801855300681C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B2D88A2801855300681C2A /* Assets.xcassets */; };
 		A5B2D88E2801855300681C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B2D88C2801855300681C2A /* LaunchScreen.storyboard */; };
+		A5B2D89B2801C30900681C2A /* CardsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D89A2801C30900681C2A /* CardsDataModel.swift */; };
+		C0786E5853D9B87982501CD9 /* Pods_VezdekodMobileSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93E05FBB6DC91D61BAF47B6 /* Pods_VezdekodMobileSlider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048BDEC62139331E119BFD40 /* Pods-VezdekodMobileSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.debug.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.debug.xcconfig"; sourceTree = "<group>"; };
+		758E87406B2F48DB290333FC /* Pods-VezdekodMobileSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.release.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.release.xcconfig"; sourceTree = "<group>"; };
 		A5B2D87E2801855200681C2A /* VezdekodMobileSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VezdekodMobileSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B2D8812801855200681C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B2D8832801855200681C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5B2D8852801855200681C2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5B2D8852801855200681C2A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A5B2D8882801855200681C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5B2D88A2801855300681C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5B2D88D2801855300681C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5B2D88F2801855300681C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B2D89A2801C30900681C2A /* CardsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataModel.swift; sourceTree = "<group>"; };
+		E93E05FBB6DC91D61BAF47B6 /* Pods_VezdekodMobileSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VezdekodMobileSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0786E5853D9B87982501CD9 /* Pods_VezdekodMobileSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30088CE079030FB1C4834043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E93E05FBB6DC91D61BAF47B6 /* Pods_VezdekodMobileSlider.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		449BD4B1A02CA0B00F6263B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				048BDEC62139331E119BFD40 /* Pods-VezdekodMobileSlider.debug.xcconfig */,
+				758E87406B2F48DB290333FC /* Pods-VezdekodMobileSlider.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5B2D8752801855200681C2A = {
 			isa = PBXGroup;
 			children = (
 				A5B2D8802801855200681C2A /* VezdekodMobileSlider */,
 				A5B2D87F2801855200681C2A /* Products */,
+				449BD4B1A02CA0B00F6263B7 /* Pods */,
+				30088CE079030FB1C4834043 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +84,38 @@
 			children = (
 				A5B2D8812801855200681C2A /* AppDelegate.swift */,
 				A5B2D8832801855200681C2A /* SceneDelegate.swift */,
-				A5B2D8852801855200681C2A /* ViewController.swift */,
+				A5B2D8992801C2F600681C2A /* Models */,
+				A5B2D8972801A84F00681C2A /* Scenes */,
 				A5B2D8872801855200681C2A /* Main.storyboard */,
 				A5B2D88A2801855300681C2A /* Assets.xcassets */,
 				A5B2D88C2801855300681C2A /* LaunchScreen.storyboard */,
 				A5B2D88F2801855300681C2A /* Info.plist */,
 			);
 			path = VezdekodMobileSlider;
+			sourceTree = "<group>";
+		};
+		A5B2D8972801A84F00681C2A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2D8982801A85C00681C2A /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A5B2D8982801A85C00681C2A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2D8852801855200681C2A /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A5B2D8992801C2F600681C2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A5B2D89A2801C30900681C2A /* CardsDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5B2D8922801855300681C2A /* Build configuration list for PBXNativeTarget "VezdekodMobileSlider" */;
 			buildPhases = (
+				DA009B7A4387973A5542E0E4 /* [CP] Check Pods Manifest.lock */,
 				A5B2D87A2801855200681C2A /* Sources */,
 				A5B2D87B2801855200681C2A /* Frameworks */,
 				A5B2D87C2801855200681C2A /* Resources */,
+				5927F3BC28543FF7164AD020 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +185,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5927F3BC28543FF7164AD020 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA009B7A4387973A5542E0E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VezdekodMobileSlider-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5B2D87A2801855200681C2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B2D8862801855200681C2A /* ViewController.swift in Sources */,
+				A5B2D8862801855200681C2A /* MainViewController.swift in Sources */,
 				A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */,
 				A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */,
+				A5B2D89B2801C30900681C2A /* CardsDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +379,14 @@
 		};
 		A5B2D8932801855300681C2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048BDEC62139331E119BFD40 /* Pods-VezdekodMobileSlider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A47FAFQS28;
 				INFOPLIST_FILE = VezdekodMobileSlider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +400,14 @@
 		};
 		A5B2D8942801855300681C2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758E87406B2F48DB290333FC /* Pods-VezdekodMobileSlider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A47FAFQS28;
 				INFOPLIST_FILE = VezdekodMobileSlider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
