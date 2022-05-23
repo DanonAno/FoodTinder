@@ -1,0 +1,2 @@
+# VezdekodMobileSlider
+Not finished yet
