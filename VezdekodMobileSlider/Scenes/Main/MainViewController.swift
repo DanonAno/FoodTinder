@@ -53,7 +53,7 @@ class MainViewController: UIViewController {
             return
         }
         let trigger = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-        let input = MainViewModel.Input.init(trigger: trigger)
+        let input = MainViewModel.Input.init(trigger: trigger) //Cannot convert value of type 'Observable<[Any]>' to expected argument type 'Driver<String>' (aka 'SharedSequence<DriverSharingStrategy, String>')
     }
     
     

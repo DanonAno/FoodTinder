@@ -23,7 +23,7 @@ class MainViewModel: ViewModelType {
             let adreses = [""]
             let image = names[0]
             let time = ""
-            return CardView.Model.init(titleLabel: names[0], image: UIImage(named: image), adressLabel: adreses[0], timeLabel: time)
+            return CardView.Model.init(image: UIImage(named: image)!, titleLabel: names[0], subtitleLable: adreses[0], timeLabel: time)
         }
         
         return Output(

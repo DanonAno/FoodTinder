@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5765A5B28527AA900CC8825 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5765A5A28527AA900CC8825 /* CardView.swift */; };
+		A5765A5D2859F72100CC8825 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5765A5C2859F72100CC8825 /* CardView.swift */; };
 		A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8812801855200681C2A /* AppDelegate.swift */; };
 		A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8832801855200681C2A /* SceneDelegate.swift */; };
 		A5B2D8862801855200681C2A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8852801855200681C2A /* MainViewController.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		048BDEC62139331E119BFD40 /* Pods-VezdekodMobileSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.debug.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.debug.xcconfig"; sourceTree = "<group>"; };
 		758E87406B2F48DB290333FC /* Pods-VezdekodMobileSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.release.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.release.xcconfig"; sourceTree = "<group>"; };
-		A5765A5A28527AA900CC8825 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		A5765A5C2859F72100CC8825 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A5B2D87E2801855200681C2A /* VezdekodMobileSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VezdekodMobileSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B2D8812801855200681C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B2D8832801855200681C2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B2D8852801855200681C2A /* MainViewController.swift */,
-				A5765A5A28527AA900CC8825 /* CardView.swift */,
+				A5765A5C2859F72100CC8825 /* CardView.swift */,
 				A5FB9AD0284FCEF200B03700 /* MainViewModel.swift */,
 			);
 			path = Main;
@@ -246,11 +246,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5765A5B28527AA900CC8825 /* CardView.swift in Sources */,
 				A5FB9AD1284FCEF200B03700 /* MainViewModel.swift in Sources */,
 				A5B2D8862801855200681C2A /* MainViewController.swift in Sources */,
 				A5E782982850D99A00E579AB /* ViewModelType.swift in Sources */,
 				A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */,
+				A5765A5D2859F72100CC8825 /* CardView.swift in Sources */,
 				A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
