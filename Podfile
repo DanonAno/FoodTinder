@@ -6,10 +6,9 @@ target 'VezdekodMobileSlider' do
   use_frameworks!
 
   # Pods for VezdekodMobileSlider
-     pod 'ZLSwipeableViewSwift'
-     pod 'Shuffle-iOS'
      pod 'RxSwift', '6.5.0'
      pod 'RxCocoa', '6.5.0'
      pod 'SnapKit', '~> 5.0.0' 
      pod 'RealmSwift'
+     pod 'Bond'
 end
