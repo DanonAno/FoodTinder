@@ -14,21 +14,22 @@ class CardView: UIView {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "", size: 16)
+        label.font = UIFont(name: "", size: 20)
         return label
     }()
     private let adressLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "", size: 14)
+        label.font = UIFont(name: "", size: 13)
         return label
     }()
     private let timeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "", size: 12)
+        label.font = UIFont(name: "", size: 15)
         return label
     }()
     private let restorauntImage: UIImageView = {
        let image  = UIImageView(image: UIImage())
+        image.clipsToBounds = true
        return image
     }()
     
@@ -36,8 +37,9 @@ class CardView: UIView {
         super.init(frame: frame)
         layer.cornerRadius = 16
         layer.borderWidth = 2
-        backgroundColor = .gray
-        
+        backgroundColor = .white
+        setupUI()
+        makeSubviewsLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -54,18 +56,18 @@ class CardView: UIView {
         restorauntImage.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.left.right.equalToSuperview()
-            make.bottom.equalToSuperview().inset(80)
+            make.bottom.equalToSuperview().inset(140)
         }
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(restorauntImage.snp.bottom).inset(10)
+            make.top.equalTo(restorauntImage.snp.bottom).offset(10)
             make.left.equalToSuperview().inset(16)
         }
         adressLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).inset(10)
+            make.top.equalTo(nameLabel.snp.bottom).offset(14)
             make.left.equalToSuperview().inset(16)
         }
         timeLabel.snp.makeConstraints { make in
-            make.top.equalTo(adressLabel.snp.bottom).inset(10)
+            make.top.equalTo(adressLabel.snp.bottom).offset(14)
             make.left.equalToSuperview().inset(16)
         }
     }

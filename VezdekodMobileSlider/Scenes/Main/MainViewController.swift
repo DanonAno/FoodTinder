@@ -12,8 +12,10 @@ import SnapKit
 class MainViewController: UIViewController {
     //MARK: - Subviews
     
-    let cardView = CardView()
-
+    let cardView: CardView = {
+       let view = CardView()
+       return view
+    }()
     let buttonAccept: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Принять", for: .normal)
@@ -22,7 +24,7 @@ class MainViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         return button
     }()
-    let cancelButton: UIButton = {
+    let buttonCancel: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Отклонить", for: .normal)
         button.backgroundColor = .systemRed
@@ -30,37 +32,64 @@ class MainViewController: UIViewController {
         button.layer.cornerRadius = 5
         return button
     }()
-    var viewModel: MainViewModel!
+    var viewModel = MainViewModel()
     private let disposeBag = DisposeBag()
     //MARK: - LifeSycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 185/255, green: 185/255, blue: 185/255, alpha: 1)
         setupUI()
-        makeUILayout()
+        makeSubviewsLayout()
+        setupBindings()
     }
     //MARK: - SetupLayout
     private func setupUI() {
-        
+        view.addSubview(cardView)
+        view.addSubview(buttonAccept)
+        view.addSubview(buttonCancel)
     }
     
-    private func makeUILayout() {
-        
+    private func makeSubviewsLayout() {
+        cardView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(110)
+            make.left.right.equalToSuperview().inset(24)
+            make.bottom.equalToSuperview().inset(120)
+        }
+        buttonAccept.snp.makeConstraints { make in
+            make.top.equalTo(cardView.snp.bottom).offset(36)
+            make.left.equalToSuperview().inset(24)
+            make.height.equalTo(60)
+        }
+        buttonCancel.snp.makeConstraints { make in
+            make.top.equalTo(cardView.snp.bottom).offset(36)
+            make.right.equalToSuperview().inset(24)
+            make.height.equalTo(60)
+        }
     }
     private func setupBindings() {
-        
-        guard let viewModel = self.viewModel else {
-            return
-        }
+         let viewModel = viewModel
         let trigger = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
-        let input = MainViewModel.Input.init(trigger: trigger) //Cannot convert value of type 'Observable<[Any]>' to expected argument type 'Driver<String>' (aka 'SharedSequence<DriverSharingStrategy, String>')
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
+        let input = MainViewModel.Input.init(trigger: trigger, cancelTrigger: buttonCancel.rx.tap.asDriver(), acceptTrigger: buttonAccept.rx.tap.asDriver())
+        
+        let output = viewModel.transform(input: input)
+        [
+            output.trigger.drive(cardView.rx.model),
+            output.accept.drive(self.rx.model)
+            
+        ]
+            .forEach({$0.disposed(by: disposeBag)})
     }
     
-    
-//    @objc private func acceptZakaz() {
-//        let dialogMessage = UIAlertController(title: "Attention", message: "Ваш заказ принят в обработку.", preferredStyle: .alert)
-//        self.present(dialogMessage, animated: true, completion: nil)
-//
-//    }
 }
 
+extension Reactive where Base: MainViewController {
+    var model: Binder<Void> {
+    return Binder(self.base) { view, model in
+        let dialogMessage = UIAlertController(title: "Attention", message: "Ваш заказ принят в обработку", preferredStyle: .alert)
+        dialogMessage.addAction(UIAlertAction(title: "OK", style: .cancel))
+        view.present(dialogMessage, animated: true)
+    }
+  }
+}
