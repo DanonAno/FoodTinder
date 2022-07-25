@@ -1,9 +1,4 @@
 PODS:
-  - Bond (7.8.1):
-    - Differ (~> 1.4)
-    - ReactiveKit (~> 3.14)
-  - Differ (1.4.5)
-  - ReactiveKit (3.19.1)
   - Realm (10.25.0):
     - Realm/Headers (= 10.25.0)
   - Realm/Headers (10.25.0)
@@ -15,46 +10,35 @@ PODS:
   - RxRelay (6.5.0):
     - RxSwift (= 6.5.0)
   - RxSwift (6.5.0)
-  - Shuffle-iOS (0.5.0)
   - SnapKit (5.0.1)
-  - ZLSwipeableViewSwift (0.0.9)
+  - YandexMapsMobile (4.1.0-lite)
 
 DEPENDENCIES:
-  - Bond
   - RealmSwift
   - RxCocoa (= 6.5.0)
   - RxSwift (= 6.5.0)
-  - Shuffle-iOS
   - SnapKit (~> 5.0.0)
-  - ZLSwipeableViewSwift
+  - YandexMapsMobile (= 4.1.0-lite)
 
 SPEC REPOS:
   trunk:
-    - Bond
-    - Differ
-    - ReactiveKit
     - Realm
     - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
-    - Shuffle-iOS
     - SnapKit
-    - ZLSwipeableViewSwift
+    - YandexMapsMobile
 
 SPEC CHECKSUMS:
-  Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
-  Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
-  ReactiveKit: a36ebeb959fe6852dd674cc423163bfffb7e0541
   Realm: 22a82aaa0e73f3483e3a6df32549c4c5cd34aa63
   RealmSwift: c2a635212400923edd3f828b8a37d55d3eb31863
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
-  Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  ZLSwipeableViewSwift: 0d4f2061d36e6daee2b3da8977e0906feee0383d
+  YandexMapsMobile: 549f83d16cb7d1ea73031163722852f408b85841
 
-PODFILE CHECKSUM: 0a7faaa13522ed907fb32bafb71204d22e4a85e3
+PODFILE CHECKSUM: 7eac1ae97e38d1ac1ae6d1aa86cc1611cabe42d5
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

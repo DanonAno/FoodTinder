@@ -10,5 +10,5 @@ target 'VezdekodMobileSlider' do
      pod 'RxCocoa', '6.5.0'
      pod 'SnapKit', '~> 5.0.0' 
      pod 'RealmSwift'
-     pod 'Bond'
+     pod 'YandexMapsMobile', '4.1.0-lite'
 end
