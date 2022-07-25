@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A547175B288F1509003A562F /* RxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547175A288F1509003A562F /* RxExtension.swift */; };
+		A547175E288F1913003A562F /* RestorauntsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547175D288F1913003A562F /* RestorauntsModel.swift */; };
+		A5471761288F199F003A562F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5471760288F199F003A562F /* Constants.swift */; };
 		A5765A5D2859F72100CC8825 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5765A5C2859F72100CC8825 /* CardView.swift */; };
 		A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8812801855200681C2A /* AppDelegate.swift */; };
 		A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B2D8832801855200681C2A /* SceneDelegate.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		048BDEC62139331E119BFD40 /* Pods-VezdekodMobileSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.debug.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.debug.xcconfig"; sourceTree = "<group>"; };
 		758E87406B2F48DB290333FC /* Pods-VezdekodMobileSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VezdekodMobileSlider.release.xcconfig"; path = "Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider.release.xcconfig"; sourceTree = "<group>"; };
+		A547175A288F1509003A562F /* RxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtension.swift; sourceTree = "<group>"; };
+		A547175D288F1913003A562F /* RestorauntsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestorauntsModel.swift; sourceTree = "<group>"; };
+		A5471760288F199F003A562F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A5765A5C2859F72100CC8825 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A5B2D87E2801855200681C2A /* VezdekodMobileSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VezdekodMobileSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B2D8812801855200681C2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A547175C288F18F2003A562F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A547175D288F1913003A562F /* RestorauntsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A547175F288F198F003A562F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A5471760288F199F003A562F /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A5B2D8752801855200681C2A = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +110,8 @@
 			children = (
 				A5B2D8812801855200681C2A /* AppDelegate.swift */,
 				A5B2D8832801855200681C2A /* SceneDelegate.swift */,
-				A5B2D8992801C2F600681C2A /* Models */,
+				A547175F288F198F003A562F /* Constants */,
+				A547175C288F18F2003A562F /* Models */,
 				A5E782962850D7BE00E579AB /* Architecture */,
 				A5B2D8972801A84F00681C2A /* Scenes */,
 				A5B2D8872801855200681C2A /* Main.storyboard */,
@@ -117,17 +140,11 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A5B2D8992801C2F600681C2A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		A5E782962850D7BE00E579AB /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
 				A5E782972850D99A00E579AB /* ViewModelType.swift */,
+				A547175A288F1509003A562F /* RxExtension.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 				A5B2D87B2801855200681C2A /* Frameworks */,
 				A5B2D87C2801855200681C2A /* Resources */,
 				5927F3BC28543FF7164AD020 /* [CP] Embed Pods Frameworks */,
+				3538F9A10ED030951672446B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +218,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3538F9A10ED030951672446B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VezdekodMobileSlider/Pods-VezdekodMobileSlider-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5927F3BC28543FF7164AD020 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,11 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5FB9AD1284FCEF200B03700 /* MainViewModel.swift in Sources */,
+				A547175B288F1509003A562F /* RxExtension.swift in Sources */,
 				A5B2D8862801855200681C2A /* MainViewController.swift in Sources */,
 				A5E782982850D99A00E579AB /* ViewModelType.swift in Sources */,
+				A547175E288F1913003A562F /* RestorauntsModel.swift in Sources */,
 				A5B2D8822801855200681C2A /* AppDelegate.swift in Sources */,
 				A5765A5D2859F72100CC8825 /* CardView.swift in Sources */,
 				A5B2D8842801855200681C2A /* SceneDelegate.swift in Sources */,
+				A5471761288F199F003A562F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,7 @@ class MainViewModel: ViewModelType {
         let accept: Driver<Void>
     }
     
-    let names = ["MacDonalds","Hinkaly","BrutLe", "Ozz"]
-    let adreses = ["Университетская набережная 1","Энтузиастов 2","Энергетиков 11","Мамина 25Б"]
-    let time = "в 5 минутах хотьбы"
+    
     var zero = 0
     func transform(input: Input) -> Output {
         let cancelAction = input.cancelTrigger.do(onNext: { _ in
@@ -34,7 +32,7 @@ class MainViewModel: ViewModelType {
         })
         let triggerRest = Driver.merge(cancelAction, input.trigger).map { [self] (_) -> CardView.Model in
 
-            return CardView.Model.init(image: UIImage(named: names[zero])!, titleLabel: names[zero], subtitleLable: self.adreses[zero], timeLabel: time)
+            return CardView.Model.init(image: UIImage(named: restourantsModel.init().names[zero])!, titleLabel: restourantsModel.init().names[zero], subtitleLable: restourantsModel.init().adreses[zero], timeLabel: restourantsModel.init().time)
         }
         let acceptAction = input.acceptTrigger.map { (_) in
             
